@@ -31,6 +31,44 @@ def main():
 
     answer = call("/ask", {"question": "What can I borrow at Shing Mun?"})
     status = call("/status?centre=tai-mo-shan&local_date=2026-11-26")
+    visitor_questions = [
+        "What are Sai Kung’s opening hours on 7 February?",
+        "What are Sai Kung’s opening hours on 02/07/2027?",
+        "What are Sai Kung’s opening hours on 7 February 2027?",
+        "Is Tai Mo Shan open on 7 February 2027?",
+        "Can I use the accessible toilet at the Tai Mo Shan visitor centre?",
+        "Does Sai Kung have free Wi-Fi?",
+        "Is admission to Sai Kung free?",
+    ]
+    visitor_checks = []
+    for question in visitor_questions:
+        reply = call("/ask", {"question": question})
+        check = {
+            key: reply[key]
+            for key in (
+                "decision",
+                "answer",
+                "selected_passage_ids",
+                "citations",
+                "tools_used",
+            )
+        }
+        check["proposal_state"] = (
+            reply["proposal"]["state"] if reply["proposal"] else None
+        )
+        if reply["lookup"]:
+            check["lookup"] = {
+                key: reply["lookup"][key]
+                for key in (
+                    "centre",
+                    "local_date",
+                    "area",
+                    "status",
+                    "basis",
+                    "notices",
+                )
+            }
+        visitor_checks.append({"question": question, **check})
     staged = call(
         "/ask",
         {
@@ -71,6 +109,7 @@ def main():
                     "text": answer["answer"],
                     "citations": answer["citations"],
                 },
+                "visitor_checks": visitor_checks,
                 "closure": {
                     "date": status["local_date"],
                     "status": status["status"],

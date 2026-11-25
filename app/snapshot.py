@@ -69,7 +69,7 @@ def lookup(args: Lookup, *, notices=None) -> Status:
             refs.append(("afcd-photo", "Hiking Etiquette / Date & Location"))
         if lunar:
             status, basis = "scheduled_closed", "lunar_days_1_2"
-            message = f"{subject} is scheduled to close on lunar new year day {year['lunar_new_year_days'].index(key) + 1}."
+            message = f"{subject} is scheduled to close on Lunar New Year day {year['lunar_new_year_days'].index(key) + 1}."
         elif area == Area.PHOTO:
             listed = day.weekday() >= 5 or bool(holiday)
             status, basis = (
@@ -122,8 +122,17 @@ def lookup(args: Lookup, *, notices=None) -> Status:
             detail = decisive["description"]
             recorded = decisive["observed_on"]
             if not decisive["to"] and key > recorded:
-                status, basis = "unknown", "after_notice_observation"
-                message = f"{detail} The snapshot recorded this on {recorded} with no end date. The status on {key} is unconfirmed."
+                uncertain = (
+                    "Reopening"
+                    if decisive["kind"] == "closure"
+                    else "The operating status"
+                )
+                context = f"{detail} The snapshot recorded this notice on {recorded} with no end date. {uncertain} as of {key} is unconfirmed."
+                if status == "scheduled_closed":
+                    message += " " + context
+                else:
+                    status, basis = "unknown", "after_notice_observation"
+                    message = context
             elif decisive["kind"] == "reopening":
                 status, basis = "reopening_observed", "snapshot_reopening"
                 message = f"{detail} AFCD reported reopening as of {recorded}. The effective reopening date is unspecified."

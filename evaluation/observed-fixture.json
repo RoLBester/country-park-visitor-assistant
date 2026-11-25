@@ -1,25 +1,33 @@
 {
-  "finished_at": "2026-11-26T01:28:18+08:00",
+  "finished_at": "2026-11-26T02:09:45+08:00",
   "snapshot": "2026-11-26",
   "runtime": {
     "adapter": "fixture",
     "python": "3.15.2",
     "fastapi": "0.165.0",
+    "starlette": "1.10.0",
+    "uvicorn": "0.54.0",
+    "pydantic": "2.14.4",
+    "psycopg": "3.3.9",
+    "psycopg-binary": "3.3.9",
+    "pytest": "9.2.0",
+    "httpx": "0.28.1",
+    "httpx2": "2.16.2",
     "postgres": "19.0 (Debian 19.0-1.pgdg13+1)",
     "pgvector": "0.8.7"
   },
   "scores": {
     "guidance": {
-      "passed": 12,
-      "total": 12
+      "passed": 15,
+      "total": 15
     },
     "lookup": {
-      "passed": 16,
-      "total": 16
+      "passed": 18,
+      "total": 18
     },
     "boundaries": {
-      "passed": 6,
-      "total": 6
+      "passed": 10,
+      "total": 10
     },
     "approval": {
       "passed": 9,
@@ -37,10 +45,19 @@
         "source_ids": [
           "afcd-faq"
         ],
+        "retrieved_passage_ids": [
+          "admission",
+          "weather-rain",
+          "sk-transit",
+          "sk-location",
+          "directory",
+          "weather-t8"
+        ],
         "passage_ids": [
           "admission"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -53,10 +70,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-loans",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets",
+          "sm-exhibits"
+        ],
         "passage_ids": [
           "sm-loans"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -69,10 +95,19 @@
         "source_ids": [
           "afcd-sk"
         ],
+        "retrieved_passage_ids": [
+          "sk-toilet",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets",
+          "sk-exhibits"
+        ],
         "passage_ids": [
           "sk-toilet"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -85,10 +120,20 @@
         "source_ids": [
           "afcd-tms"
         ],
+        "retrieved_passage_ids": [
+          "weather-rain",
+          "admission",
+          "tms-bus",
+          "directory",
+          "weather-t8",
+          "tms-hours",
+          "tms-closure"
+        ],
         "passage_ids": [
           "tms-bus"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -101,10 +146,20 @@
         "source_ids": [
           "afcd-tms"
         ],
+        "retrieved_passage_ids": [
+          "tms-phone",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets",
+          "tms-access",
+          "tms-closure"
+        ],
         "passage_ids": [
           "tms-phone"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -117,10 +172,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-transit",
+          "sm-hours",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets"
+        ],
         "passage_ids": [
           "sm-transit"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -133,10 +197,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-exhibits",
+          "directory",
+          "admission",
+          "footpaths",
+          "leaflets",
+          "sm-hours"
+        ],
         "passage_ids": [
           "sm-exhibits"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -149,10 +222,19 @@
         "source_ids": [
           "afcd-faq"
         ],
+        "retrieved_passage_ids": [
+          "leaflets",
+          "tms-bus",
+          "sm-transit",
+          "sm-loans",
+          "sk-transit",
+          "admission"
+        ],
         "passage_ids": [
           "leaflets"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -165,10 +247,19 @@
         "source_ids": [
           "afcd-sk"
         ],
+        "retrieved_passage_ids": [
+          "sk-hours",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets"
+        ],
         "passage_ids": [
           "sk-hours"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -177,16 +268,26 @@
       "passed": true,
       "observed": {
         "decision": "answer",
-        "answer": "Tai Mo Shan: AFCD lists 09:30–16:30 on Mondays and Wednesdays through Sundays. Tuesdays follow those hours on public holidays. The first two lunar new year days are closed. AFCD's renovation notice covers the entire Tai Mo Shan visitor centre from 1 July 2026. It gives no reopening date.",
+        "answer": "Tai Mo Shan: AFCD lists 09:30–16:30 on Mondays and Wednesdays through Sundays. Tuesdays follow those hours on public holidays. The first two lunar new year days are closed. AFCD reported that the entire Tai Mo Shan visitor centre closed for renovation on 1 July 2026. Its notice gives no reopening date.",
         "source_ids": [
           "afcd-tms",
           "afcd-tms-notice"
+        ],
+        "retrieved_passage_ids": [
+          "tms-hours",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets",
+          "tms-access",
+          "tms-closure"
         ],
         "passage_ids": [
           "tms-hours",
           "tms-closure"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -199,10 +300,19 @@
         "source_ids": [
           "afcd-weather"
         ],
+        "retrieved_passage_ids": [
+          "weather-rain",
+          "directory",
+          "admission",
+          "sk-hours",
+          "sm-hours",
+          "tms-hours"
+        ],
         "passage_ids": [
           "weather-rain"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -215,10 +325,108 @@
         "source_ids": [
           "afcd-faq"
         ],
+        "retrieved_passage_ids": [
+          "footpaths",
+          "weather-t8",
+          "sk-photo",
+          "weather-rain",
+          "tms-parking",
+          "directory"
+        ],
         "passage_ids": [
           "footpaths"
         ],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
+      }
+    },
+    {
+      "id": "A13",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "Tai Mo Shan lists ramp access and an accessible toilet inside the centre. AFCD reported that the entire Tai Mo Shan visitor centre closed for renovation on 1 July 2026. Its notice gives no reopening date.",
+        "source_ids": [
+          "afcd-tms",
+          "afcd-tms-notice"
+        ],
+        "retrieved_passage_ids": [
+          "tms-access",
+          "tms-parking",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets",
+          "tms-closure"
+        ],
+        "passage_ids": [
+          "tms-access",
+          "tms-closure"
+        ],
+        "tools": [],
+        "proposal_state": null,
+        "indoor_facility": {
+          "passage_ids": [
+            "tms-access",
+            "tms-closure"
+          ],
+          "model_decision": "answer",
+          "model_passage_ids": [
+            "tms-access"
+          ]
+        }
+      }
+    },
+    {
+      "id": "A14",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "Admission to country park visitor centres is free.",
+        "source_ids": [
+          "afcd-faq"
+        ],
+        "retrieved_passage_ids": [
+          "admission",
+          "weather-rain",
+          "sk-transit",
+          "sk-location",
+          "directory",
+          "weather-t8"
+        ],
+        "passage_ids": [
+          "admission"
+        ],
+        "tools": [],
+        "proposal_state": null
+      }
+    },
+    {
+      "id": "A15",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "AFCD lists an accessible parking space at the Tai Mo Shan car park.",
+        "source_ids": [
+          "afcd-tms"
+        ],
+        "retrieved_passage_ids": [
+          "tms-parking",
+          "tms-access",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets",
+          "tms-closure"
+        ],
+        "passage_ids": [
+          "tms-parking"
+        ],
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -233,16 +441,26 @@
           "hko-2026",
           "hk-1823"
         ],
+        "retrieved_passage_ids": [
+          "sk-exhibits",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "published_hours",
         "basis": "regular_hours",
         "area": "centre",
         "centre": "sai-kung",
         "local_date": "2026-11-26",
-        "proposal": false
+        "proposal": false,
+        "notices": []
       }
     },
     {
@@ -257,16 +475,26 @@
           "hko-2026",
           "hk-1823"
         ],
+        "retrieved_passage_ids": [
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets",
+          "sm-exhibits"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "scheduled_closed",
         "basis": "ordinary_tuesday",
         "area": "centre",
         "centre": "shing-mun",
         "local_date": "2026-11-24",
-        "proposal": false
+        "proposal": false,
+        "notices": []
       }
     },
     {
@@ -281,16 +509,26 @@
           "hko-2026",
           "hk-1823"
         ],
+        "retrieved_passage_ids": [
+          "admission",
+          "sk-exhibits",
+          "weather-t8",
+          "directory",
+          "footpaths",
+          "leaflets"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "published_hours",
         "basis": "public_holiday",
         "area": "centre",
         "centre": "sai-kung",
         "local_date": "2026-04-07",
-        "proposal": false
+        "proposal": false,
+        "notices": []
       }
     },
     {
@@ -299,22 +537,32 @@
       "passed": true,
       "observed": {
         "decision": "status",
-        "answer": "Shing Mun is scheduled to close on lunar new year day 1. Actual opening on the day is unconfirmed.",
+        "answer": "Shing Mun is scheduled to close on Lunar New Year day 1. Actual opening on the day is unconfirmed.",
         "source_ids": [
           "afcd-sm",
           "hko-2026",
           "hk-1823"
         ],
+        "retrieved_passage_ids": [
+          "sm-loans",
+          "footpaths",
+          "weather-rain",
+          "sm-hours",
+          "admission",
+          "directory"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "scheduled_closed",
         "basis": "lunar_days_1_2",
         "area": "centre",
         "centre": "shing-mun",
         "local_date": "2026-02-17",
-        "proposal": false
+        "proposal": false,
+        "notices": []
       }
     },
     {
@@ -323,22 +571,32 @@
       "passed": true,
       "observed": {
         "decision": "status",
-        "answer": "Sai Kung is scheduled to close on lunar new year day 2. Actual opening on the day is unconfirmed.",
+        "answer": "Sai Kung is scheduled to close on Lunar New Year day 2. Actual opening on the day is unconfirmed.",
         "source_ids": [
           "afcd-sk",
           "hko-2027",
           "hk-1823"
         ],
+        "retrieved_passage_ids": [
+          "sk-transit",
+          "sk-photo",
+          "weather-rain",
+          "sk-hours",
+          "admission",
+          "directory"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "scheduled_closed",
         "basis": "lunar_days_1_2",
         "area": "centre",
         "centre": "sai-kung",
         "local_date": "2027-02-07",
-        "proposal": false
+        "proposal": false,
+        "notices": []
       }
     },
     {
@@ -353,16 +611,26 @@
           "hko-2027",
           "hk-1823"
         ],
+        "retrieved_passage_ids": [
+          "sm-hours",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "published_hours",
         "basis": "public_holiday",
         "area": "centre",
         "centre": "shing-mun",
         "local_date": "2027-02-09",
-        "proposal": false
+        "proposal": false,
+        "notices": []
       }
     },
     {
@@ -377,16 +645,26 @@
           "hko-2027",
           "hk-1823"
         ],
+        "retrieved_passage_ids": [
+          "sk-hours",
+          "sk-photo",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "published_hours",
         "basis": "public_holiday",
         "area": "centre",
         "centre": "sai-kung",
         "local_date": "2027-02-08",
-        "proposal": false
+        "proposal": false,
+        "notices": []
       }
     },
     {
@@ -402,16 +680,40 @@
           "hk-1823",
           "afcd-tms-notice"
         ],
+        "retrieved_passage_ids": [
+          "tms-phone",
+          "tms-closure",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "notice_closed",
         "basis": "closure_notice",
         "area": "centre",
         "centre": "tai-mo-shan",
         "local_date": "2026-07-01",
-        "proposal": false
+        "proposal": false,
+        "notices": [
+          {
+            "centre": "tai-mo-shan",
+            "area": "centre",
+            "kind": "closure",
+            "source_id": "afcd-tms-notice",
+            "also": [
+              "afcd-tms"
+            ],
+            "from": "2026-07-01",
+            "to": null,
+            "observed_on": "2026-11-26",
+            "description": "Renovation of the entire Tai Mo Shan visitor centre."
+          }
+        ]
       }
     },
     {
@@ -426,16 +728,26 @@
           "hko-2026",
           "hk-1823"
         ],
+        "retrieved_passage_ids": [
+          "tms-closure",
+          "leaflets",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "published_hours",
         "basis": "regular_hours",
         "area": "centre",
         "centre": "tai-mo-shan",
         "local_date": "2026-06-29",
-        "proposal": false
+        "proposal": false,
+        "notices": []
       }
     },
     {
@@ -451,16 +763,40 @@
           "hk-1823",
           "afcd-tms-notice"
         ],
+        "retrieved_passage_ids": [
+          "tms-closure",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "notice_closed",
         "basis": "closure_notice",
         "area": "centre",
         "centre": "tai-mo-shan",
         "local_date": "2026-11-26",
-        "proposal": false
+        "proposal": false,
+        "notices": [
+          {
+            "centre": "tai-mo-shan",
+            "area": "centre",
+            "kind": "closure",
+            "source_id": "afcd-tms-notice",
+            "also": [
+              "afcd-tms"
+            ],
+            "from": "2026-07-01",
+            "to": null,
+            "observed_on": "2026-11-26",
+            "description": "Renovation of the entire Tai Mo Shan visitor centre."
+          }
+        ]
       }
     },
     {
@@ -469,24 +805,49 @@
       "passed": true,
       "observed": {
         "decision": "status",
-        "answer": "Renovation of the entire Tai Mo Shan visitor centre. The snapshot recorded this on 2026-11-26 with no end date. The status on 2027-01-02 is unconfirmed. A local staff follow-up draft is awaiting reviewer approval.",
+        "answer": "Renovation of the entire Tai Mo Shan visitor centre. The snapshot recorded this notice on 2026-11-26 with no end date. Reopening as of 2027-01-02 is unconfirmed. A local staff follow-up draft is awaiting reviewer approval.",
         "source_ids": [
           "afcd-tms",
           "hko-2027",
           "hk-1823",
           "afcd-tms-notice"
         ],
+        "retrieved_passage_ids": [
+          "tms-phone",
+          "tms-hours",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths",
+          "tms-closure"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status",
           "propose_followup"
         ],
+        "proposal_state": "pending",
         "status": "unknown",
         "basis": "after_notice_observation",
         "area": "centre",
         "centre": "tai-mo-shan",
         "local_date": "2027-01-02",
-        "proposal": true
+        "proposal": true,
+        "notices": [
+          {
+            "centre": "tai-mo-shan",
+            "area": "centre",
+            "kind": "closure",
+            "source_id": "afcd-tms-notice",
+            "also": [
+              "afcd-tms"
+            ],
+            "from": "2026-07-01",
+            "to": null,
+            "observed_on": "2026-11-26",
+            "description": "Renovation of the entire Tai Mo Shan visitor centre."
+          }
+        ]
       }
     },
     {
@@ -500,16 +861,26 @@
           "afcd-sk",
           "hk-1823-index"
         ],
+        "retrieved_passage_ids": [
+          "sk-phone",
+          "footpaths",
+          "weather-t8",
+          "sk-transit",
+          "weather-rain",
+          "admission"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "unknown",
         "basis": "outside_calendar",
         "area": "centre",
         "centre": "sai-kung",
         "local_date": "2028-01-01",
-        "proposal": false
+        "proposal": false,
+        "notices": []
       }
     },
     {
@@ -523,17 +894,27 @@
           "afcd-sm",
           "hk-1823-index"
         ],
+        "retrieved_passage_ids": [
+          "weather-t8",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status",
           "propose_followup"
         ],
+        "proposal_state": "pending",
         "status": "unknown",
         "basis": "outside_calendar",
         "area": "centre",
         "centre": "shing-mun",
         "local_date": "2025-12-31",
-        "proposal": true
+        "proposal": true,
+        "notices": []
       }
     },
     {
@@ -550,16 +931,51 @@
           "afcd-photo",
           "afcd-tms-notice"
         ],
+        "retrieved_passage_ids": [
+          "tms-photo",
+          "weather-rain",
+          "tms-closure",
+          "weather-t8",
+          "footpaths",
+          "leaflets"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "notice_closed",
         "basis": "closure_notice",
         "area": "photo-exhibition",
         "centre": "tai-mo-shan",
         "local_date": "2026-11-26",
-        "proposal": false
+        "proposal": false,
+        "notices": [
+          {
+            "centre": "tai-mo-shan",
+            "area": "centre",
+            "kind": "closure",
+            "source_id": "afcd-tms-notice",
+            "also": [
+              "afcd-tms"
+            ],
+            "from": "2026-07-01",
+            "to": null,
+            "observed_on": "2026-11-26",
+            "description": "Renovation of the entire Tai Mo Shan visitor centre."
+          },
+          {
+            "centre": "tai-mo-shan",
+            "area": "photo-exhibition",
+            "kind": "closure",
+            "source_id": "afcd-photo",
+            "also": [],
+            "from": null,
+            "to": null,
+            "observed_on": "2026-11-26",
+            "description": "Maintenance suspension of the Hiking Etiquette photo exhibition at Tai Mo Shan."
+          }
+        ]
       }
     },
     {
@@ -575,16 +991,26 @@
           "hk-1823",
           "afcd-photo"
         ],
+        "retrieved_passage_ids": [
+          "sk-photo",
+          "weather-t8",
+          "weather-rain",
+          "footpaths",
+          "leaflets",
+          "sk-exhibits"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "published_session",
         "basis": "exhibition_schedule",
         "area": "photo-exhibition",
         "centre": "sai-kung",
         "local_date": "2026-11-28",
-        "proposal": false
+        "proposal": false,
+        "notices": []
       }
     },
     {
@@ -600,16 +1026,110 @@
           "hk-1823",
           "afcd-photo"
         ],
+        "retrieved_passage_ids": [
+          "sk-photo",
+          "weather-t8",
+          "weather-rain",
+          "footpaths",
+          "leaflets",
+          "sk-exhibits"
+        ],
         "passage_ids": [],
         "tools": [
           "lookup_status"
         ],
+        "proposal_state": null,
         "status": "scheduled_closed",
         "basis": "no_exhibition_session",
         "area": "photo-exhibition",
         "centre": "sai-kung",
         "local_date": "2026-11-26",
-        "proposal": false
+        "proposal": false,
+        "notices": []
+      }
+    },
+    {
+      "id": "L17",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Tai Mo Shan is scheduled to close on Lunar New Year day 2. Renovation of the entire Tai Mo Shan visitor centre. The snapshot recorded this notice on 2026-11-26 with no end date. Reopening as of 2027-02-07 is unconfirmed.",
+        "source_ids": [
+          "afcd-tms",
+          "hko-2027",
+          "hk-1823",
+          "afcd-tms-notice"
+        ],
+        "retrieved_passage_ids": [
+          "weather-rain",
+          "tms-hours",
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets",
+          "tms-closure"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "proposal_state": null,
+        "status": "scheduled_closed",
+        "basis": "lunar_days_1_2",
+        "area": "centre",
+        "centre": "tai-mo-shan",
+        "local_date": "2027-02-07",
+        "proposal": false,
+        "notices": [
+          {
+            "centre": "tai-mo-shan",
+            "area": "centre",
+            "kind": "closure",
+            "source_id": "afcd-tms-notice",
+            "also": [
+              "afcd-tms"
+            ],
+            "from": "2026-07-01",
+            "to": null,
+            "observed_on": "2026-11-26",
+            "description": "Renovation of the entire Tai Mo Shan visitor centre."
+          }
+        ]
+      }
+    },
+    {
+      "id": "L18",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Sai Kung is scheduled to close on Lunar New Year day 2. Actual opening on the day is unconfirmed.",
+        "source_ids": [
+          "afcd-sk",
+          "hko-2027",
+          "hk-1823"
+        ],
+        "retrieved_passage_ids": [
+          "sk-hours",
+          "sk-location",
+          "directory",
+          "sk-exhibits",
+          "sk-transit",
+          "sk-photo"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "proposal_state": null,
+        "status": "scheduled_closed",
+        "basis": "lunar_days_1_2",
+        "area": "centre",
+        "centre": "sai-kung",
+        "local_date": "2027-02-07",
+        "proposal": false,
+        "notices": []
       }
     },
     {
@@ -620,8 +1140,17 @@
         "decision": "unknown",
         "answer": "I couldn't find a published answer to that question in the visitor-centre snapshot.",
         "source_ids": [],
+        "retrieved_passage_ids": [
+          "admission",
+          "directory",
+          "footpaths",
+          "leaflets",
+          "sk-exhibits",
+          "sk-hours"
+        ],
         "passage_ids": [],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -632,8 +1161,17 @@
         "decision": "clarify",
         "answer": "Which centre do you mean (Sai Kung, Shing Mun or Tai Mo Shan)?",
         "source_ids": [],
+        "retrieved_passage_ids": [
+          "tms-closure",
+          "sk-exhibits",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths"
+        ],
         "passage_ids": [],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -644,8 +1182,17 @@
         "decision": "clarify",
         "answer": "Which Hong Kong date should I check? Use YYYY-MM-DD, today or tomorrow.",
         "source_ids": [],
+        "retrieved_passage_ids": [
+          "sm-hours",
+          "sm-loans",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths"
+        ],
         "passage_ids": [],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -656,8 +1203,17 @@
         "decision": "clarify",
         "answer": "Which single centre should I check (Sai Kung, Shing Mun or Tai Mo Shan)?",
         "source_ids": [],
+        "retrieved_passage_ids": [
+          "tms-closure",
+          "sk-exhibits",
+          "weather-rain",
+          "admission",
+          "directory",
+          "footpaths"
+        ],
         "passage_ids": [],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -668,8 +1224,17 @@
         "decision": "clarify",
         "answer": "Please give a valid Hong Kong calendar date in YYYY-MM-DD format.",
         "source_ids": [],
+        "retrieved_passage_ids": [
+          "admission",
+          "sk-exhibits",
+          "weather-t8",
+          "directory",
+          "footpaths",
+          "leaflets"
+        ],
         "passage_ids": [],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -680,8 +1245,101 @@
         "decision": "clarify",
         "answer": "Which single Hong Kong date should I check?",
         "source_ids": [],
+        "retrieved_passage_ids": [
+          "sk-exhibits",
+          "weather-rain",
+          "weather-t8",
+          "admission",
+          "directory",
+          "footpaths"
+        ],
         "passage_ids": [],
-        "tools": []
+        "tools": [],
+        "proposal_state": null
+      }
+    },
+    {
+      "id": "B07",
+      "group": "boundaries",
+      "passed": true,
+      "observed": {
+        "decision": "clarify",
+        "answer": "Which year do you mean for 7 February?",
+        "source_ids": [],
+        "retrieved_passage_ids": [
+          "sk-hours",
+          "sk-location",
+          "directory",
+          "sk-exhibits",
+          "sk-transit",
+          "weather-rain"
+        ],
+        "passage_ids": [],
+        "tools": [],
+        "proposal_state": null
+      }
+    },
+    {
+      "id": "B08",
+      "group": "boundaries",
+      "passed": true,
+      "observed": {
+        "decision": "clarify",
+        "answer": "Please give the Hong Kong date in YYYY-MM-DD format.",
+        "source_ids": [],
+        "retrieved_passage_ids": [
+          "sk-hours",
+          "sk-location",
+          "directory",
+          "sk-exhibits",
+          "sk-transit",
+          "weather-t8"
+        ],
+        "passage_ids": [],
+        "tools": [],
+        "proposal_state": null
+      }
+    },
+    {
+      "id": "B09",
+      "group": "boundaries",
+      "passed": true,
+      "observed": {
+        "decision": "unknown",
+        "answer": "I couldn't find a published answer to that question in the visitor-centre snapshot.",
+        "source_ids": [],
+        "retrieved_passage_ids": [
+          "admission",
+          "leaflets",
+          "sk-photo",
+          "directory",
+          "footpaths",
+          "sk-exhibits"
+        ],
+        "passage_ids": [],
+        "tools": [],
+        "proposal_state": null
+      }
+    },
+    {
+      "id": "B10",
+      "group": "boundaries",
+      "passed": true,
+      "observed": {
+        "decision": "unknown",
+        "answer": "I couldn't find a published answer to that question in the visitor-centre snapshot.",
+        "source_ids": [],
+        "retrieved_passage_ids": [
+          "footpaths",
+          "admission",
+          "sk-transit",
+          "directory",
+          "leaflets",
+          "sk-exhibits"
+        ],
+        "passage_ids": [],
+        "tools": [],
+        "proposal_state": null
       }
     },
     {
@@ -694,10 +1352,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-loans",
+          "weather-t8",
+          "weather-rain",
+          "footpaths",
+          "admission",
+          "directory"
+        ],
         "passage_ids": [],
         "tools": [
           "propose_followup"
         ],
+        "proposal_state": "pending",
         "state": "pending",
         "responses": [],
         "review_rows": 0,
@@ -719,10 +1386,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-loans",
+          "weather-t8",
+          "weather-rain",
+          "footpaths",
+          "admission",
+          "directory"
+        ],
         "passage_ids": [],
         "tools": [
           "propose_followup"
         ],
+        "proposal_state": "pending",
         "state": "pending",
         "responses": [
           403,
@@ -747,10 +1423,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-loans",
+          "weather-t8",
+          "weather-rain",
+          "footpaths",
+          "admission",
+          "directory"
+        ],
         "passage_ids": [],
         "tools": [
           "propose_followup"
         ],
+        "proposal_state": "pending",
         "state": "pending",
         "responses": [
           401,
@@ -775,10 +1460,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-loans",
+          "weather-t8",
+          "weather-rain",
+          "footpaths",
+          "admission",
+          "directory"
+        ],
         "passage_ids": [],
         "tools": [
           "propose_followup"
         ],
+        "proposal_state": "pending",
         "state": "approved",
         "responses": [
           200
@@ -804,10 +1498,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-loans",
+          "weather-t8",
+          "weather-rain",
+          "footpaths",
+          "admission",
+          "directory"
+        ],
         "passage_ids": [],
         "tools": [
           "propose_followup"
         ],
+        "proposal_state": "pending",
         "state": "rejected",
         "responses": [
           200
@@ -832,10 +1535,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-loans",
+          "weather-t8",
+          "weather-rain",
+          "footpaths",
+          "admission",
+          "directory"
+        ],
         "passage_ids": [],
         "tools": [
           "propose_followup"
         ],
+        "proposal_state": "pending",
         "state": "rejected",
         "responses": [
           200,
@@ -861,10 +1573,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-loans",
+          "weather-t8",
+          "weather-rain",
+          "footpaths",
+          "admission",
+          "directory"
+        ],
         "passage_ids": [],
         "tools": [
           "propose_followup"
         ],
+        "proposal_state": "pending",
         "state": "approved",
         "responses": [
           200,
@@ -891,10 +1612,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-loans",
+          "weather-t8",
+          "weather-rain",
+          "footpaths",
+          "admission",
+          "directory"
+        ],
         "passage_ids": [],
         "tools": [
           "propose_followup"
         ],
+        "proposal_state": "pending",
         "state": "approved",
         "responses": [
           200,
@@ -925,10 +1655,19 @@
         "source_ids": [
           "afcd-sm"
         ],
+        "retrieved_passage_ids": [
+          "sm-loans",
+          "weather-t8",
+          "weather-rain",
+          "footpaths",
+          "admission",
+          "directory"
+        ],
         "passage_ids": [],
         "tools": [
           "propose_followup"
         ],
+        "proposal_state": "pending",
         "state": "approved",
         "responses": [
           200,

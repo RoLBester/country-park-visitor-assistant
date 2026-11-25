@@ -1,12 +1,12 @@
 import json
-import math
 import os
 from dataclasses import dataclass
 
 import httpx
 from ollama import Client, ResponseError
 
-from .search import words
+from .search import listed_indoor_facility, question_topics, supports_topic
+from .snapshot import DAY
 from .types import DraftTool, Lookup, Selection
 
 
@@ -74,17 +74,13 @@ class Fixture:
             return Action(
                 tool, {"centre": ctx.centre, "reason": reason, "source_ids": refs}
             )
-        ranked = [
-            p
-            for p in passages
-            if math.isfinite(p["similarity"])
-            and set(words(question)) & set(words(p["keywords"]))
-        ]
-        if not ranked:
-            return Action("respond", {"decision": "unknown"})
-        return Action(
-            "respond", {"decision": "answer", "passage_ids": [ranked[0]["id"]]}
-        )
+        requested = question_topics(question)
+        for passage in passages:
+            if supports_topic(passage, requested):
+                return Action(
+                    "respond", {"decision": "answer", "passage_ids": [passage["id"]]}
+                )
+        return Action("respond", {"decision": "unknown"})
 
 
 class Ollama:
@@ -119,6 +115,15 @@ class Ollama:
                 "Return unknown when none answers it, or clarify when a centre is needed. "
                 "Names of facilities alone do not establish availability or opening dates."
             )
+            if listed_indoor_facility(
+                question, ctx.centre, {p["id"]: p for p in passages}
+            ):
+                payload["snapshot_date"] = DAY.isoformat()
+                instruction += (
+                    " For use of a facility inside the visitor centre, select both its listing and "
+                    "the centre closure notice. Together they answer what was recorded, even when "
+                    "reopening is unconfirmed. The notice covers only the visitor centre."
+                )
         messages = [
             {"role": "system", "content": instruction},
             {"role": "user", "content": json.dumps(payload)},

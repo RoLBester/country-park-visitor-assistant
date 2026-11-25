@@ -16,6 +16,215 @@
       }
     ]
   },
+  "visitor_checks": [
+    {
+      "question": "What are Sai Kung’s opening hours on 7 February?",
+      "decision": "clarify",
+      "answer": "Which year do you mean for 7 February?",
+      "selected_passage_ids": [],
+      "citations": [],
+      "tools_used": [],
+      "proposal_state": null
+    },
+    {
+      "question": "What are Sai Kung’s opening hours on 02/07/2027?",
+      "decision": "clarify",
+      "answer": "Please give the Hong Kong date in YYYY-MM-DD format.",
+      "selected_passage_ids": [],
+      "citations": [],
+      "tools_used": [],
+      "proposal_state": null
+    },
+    {
+      "question": "What are Sai Kung’s opening hours on 7 February 2027?",
+      "decision": "status",
+      "answer": "Sai Kung is scheduled to close on Lunar New Year day 2. Actual opening on the day is unconfirmed.",
+      "selected_passage_ids": [],
+      "citations": [
+        {
+          "source_id": "afcd-sk",
+          "title": "Sai Kung Country Park Visitor Centre",
+          "url": "https://www.afcd.gov.hk/english/country/cou_lea/cou_lea_ven/saikung.html",
+          "retrieved_at": "2026-11-26T00:59:04+08:00",
+          "scope": "Sai Kung centre",
+          "locators": [
+            "Opening Hour"
+          ]
+        },
+        {
+          "source_id": "hko-2027",
+          "title": "Gregorian-Lunar Calendar Conversion Table of 2027",
+          "url": "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2027e.txt",
+          "retrieved_at": "2026-11-26T00:59:09+08:00",
+          "scope": "Hong Kong lunar dates in 2027",
+          "locators": [
+            "Gregorian date 2027-02-07"
+          ]
+        },
+        {
+          "source_id": "hk-1823",
+          "title": "Hong Kong Public Holidays",
+          "url": "https://www.1823.gov.hk/common/ical/en.json",
+          "retrieved_at": "2026-11-26T00:59:04+08:00",
+          "scope": "Dated general holiday events",
+          "locators": [
+            "No dated holiday entry for 2027-02-07"
+          ]
+        }
+      ],
+      "tools_used": [
+        "lookup_status"
+      ],
+      "proposal_state": null,
+      "lookup": {
+        "centre": "sai-kung",
+        "local_date": "2027-02-07",
+        "area": "centre",
+        "status": "scheduled_closed",
+        "basis": "lunar_days_1_2",
+        "notices": []
+      }
+    },
+    {
+      "question": "Is Tai Mo Shan open on 7 February 2027?",
+      "decision": "status",
+      "answer": "Tai Mo Shan is scheduled to close on Lunar New Year day 2. Renovation of the entire Tai Mo Shan visitor centre. The snapshot recorded this notice on 2026-11-26 with no end date. Reopening as of 2027-02-07 is unconfirmed.",
+      "selected_passage_ids": [],
+      "citations": [
+        {
+          "source_id": "afcd-tms",
+          "title": "Tai Mo Shan Country Park Visitor Centre",
+          "url": "https://www.afcd.gov.hk/english/country/cou_lea/cou_lea_ven/taimoshan.html",
+          "retrieved_at": "2026-11-26T00:59:04+08:00",
+          "scope": "Tai Mo Shan centre",
+          "locators": [
+            "Opening Hour",
+            "Renovation of the entire Tai Mo Shan visitor centre."
+          ]
+        },
+        {
+          "source_id": "hko-2027",
+          "title": "Gregorian-Lunar Calendar Conversion Table of 2027",
+          "url": "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2027e.txt",
+          "retrieved_at": "2026-11-26T00:59:09+08:00",
+          "scope": "Hong Kong lunar dates in 2027",
+          "locators": [
+            "Gregorian date 2027-02-07"
+          ]
+        },
+        {
+          "source_id": "hk-1823",
+          "title": "Hong Kong Public Holidays",
+          "url": "https://www.1823.gov.hk/common/ical/en.json",
+          "retrieved_at": "2026-11-26T00:59:04+08:00",
+          "scope": "Dated general holiday events",
+          "locators": [
+            "No dated holiday entry for 2027-02-07"
+          ]
+        },
+        {
+          "source_id": "afcd-tms-notice",
+          "title": "Notice of Temporary Closure – Tai Mo Shan Country Park Visitor Centre",
+          "url": "https://www.hiking.gov.hk/console/public/uploads/news/fd2be37e754a5b6f18f13b50323e587846fcf797.pdf",
+          "retrieved_at": "2026-11-26T01:03:24+08:00",
+          "scope": "Entire Tai Mo Shan visitor centre",
+          "locators": [
+            "Renovation of the entire Tai Mo Shan visitor centre."
+          ]
+        }
+      ],
+      "tools_used": [
+        "lookup_status"
+      ],
+      "proposal_state": null,
+      "lookup": {
+        "centre": "tai-mo-shan",
+        "local_date": "2027-02-07",
+        "area": "centre",
+        "status": "scheduled_closed",
+        "basis": "lunar_days_1_2",
+        "notices": [
+          {
+            "centre": "tai-mo-shan",
+            "area": "centre",
+            "kind": "closure",
+            "source_id": "afcd-tms-notice",
+            "also": [
+              "afcd-tms"
+            ],
+            "from": "2026-07-01",
+            "to": null,
+            "observed_on": "2026-11-26",
+            "description": "Renovation of the entire Tai Mo Shan visitor centre."
+          }
+        ]
+      }
+    },
+    {
+      "question": "Can I use the accessible toilet at the Tai Mo Shan visitor centre?",
+      "decision": "answer",
+      "answer": "Tai Mo Shan lists ramp access and an accessible toilet inside the centre. AFCD reported that the entire Tai Mo Shan visitor centre closed for renovation on 1 July 2026. Its notice gives no reopening date.",
+      "selected_passage_ids": [
+        "tms-access",
+        "tms-closure"
+      ],
+      "citations": [
+        {
+          "source_id": "afcd-tms",
+          "title": "Tai Mo Shan Country Park Visitor Centre",
+          "url": "https://www.afcd.gov.hk/english/country/cou_lea/cou_lea_ven/taimoshan.html",
+          "retrieved_at": "2026-11-26T00:59:04+08:00",
+          "scope": "Tai Mo Shan centre",
+          "locators": [
+            "Barrier-free Facilities"
+          ]
+        },
+        {
+          "source_id": "afcd-tms-notice",
+          "title": "Notice of Temporary Closure – Tai Mo Shan Country Park Visitor Centre",
+          "url": "https://www.hiking.gov.hk/console/public/uploads/news/fd2be37e754a5b6f18f13b50323e587846fcf797.pdf",
+          "retrieved_at": "2026-11-26T01:03:24+08:00",
+          "scope": "Entire Tai Mo Shan visitor centre",
+          "locators": [
+            "Bilingual closure notice, English paragraph"
+          ]
+        }
+      ],
+      "tools_used": [],
+      "proposal_state": null
+    },
+    {
+      "question": "Does Sai Kung have free Wi-Fi?",
+      "decision": "unknown",
+      "answer": "I couldn't find a published answer to that question in the visitor-centre snapshot.",
+      "selected_passage_ids": [],
+      "citations": [],
+      "tools_used": [],
+      "proposal_state": null
+    },
+    {
+      "question": "Is admission to Sai Kung free?",
+      "decision": "answer",
+      "answer": "Admission to country park visitor centres is free.",
+      "selected_passage_ids": [
+        "admission"
+      ],
+      "citations": [
+        {
+          "source_id": "afcd-faq",
+          "title": "Country & Marine Parks – Frequently Asked Questions",
+          "url": "https://www.afcd.gov.hk/english/faq/faq_cou/faq_cou.html",
+          "retrieved_at": "2026-11-26T00:59:04+08:00",
+          "scope": "Country parks and their visitor centres",
+          "locators": [
+            "Question 8, Country Park Visitor Centres"
+          ]
+        }
+      ],
+      "tools_used": [],
+      "proposal_state": null
+    }
+  ],
   "closure": {
     "date": "2026-11-26",
     "status": "notice_closed",
@@ -67,11 +276,11 @@
   },
   "requested_visit": {
     "date": "2027-01-02",
-    "text": "Renovation of the entire Tai Mo Shan visitor centre. The snapshot recorded this on 2026-11-26 with no end date. The status on 2027-01-02 is unconfirmed. A local staff follow-up draft is awaiting reviewer approval."
+    "text": "Renovation of the entire Tai Mo Shan visitor centre. The snapshot recorded this notice on 2026-11-26 with no end date. Reopening as of 2027-01-02 is unconfirmed. A local staff follow-up draft is awaiting reviewer approval."
   },
   "pending_proposal": {
-    "id": "d8e79fde-e95a-432a-8e20-7f23dcb70213",
-    "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+    "id": "a509abb2-7b84-4d40-b713-0ded9c6f7bca",
+    "request_id": "d7239114-55e6-4cd7-85ca-bffc71444563",
     "centre": "tai-mo-shan",
     "reason": "Check the status on 2027-01-02 for the visitor.",
     "source_ids": [
@@ -83,8 +292,8 @@
     "state": "pending"
   },
   "approved_followup": {
-    "proposal_id": "d8e79fde-e95a-432a-8e20-7f23dcb70213",
-    "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+    "proposal_id": "a509abb2-7b84-4d40-b713-0ded9c6f7bca",
+    "request_id": "d7239114-55e6-4cd7-85ca-bffc71444563",
     "centre": "tai-mo-shan",
     "reason": "Check the status on 2027-01-02 for the visitor.",
     "source_ids": [
@@ -96,14 +305,14 @@
     "state": "approved",
     "reviewer": "demo-reviewer",
     "decision": "approve",
-    "decided_at": "2026-11-26T01:28:19.260497+08:00",
-    "followup_id": "9cc930b9-fe18-452a-b672-144f21a87c1f",
-    "followup_created_at": "2026-11-26T01:28:19.261054+08:00"
+    "decided_at": "2026-11-26T02:09:27.017112+08:00",
+    "followup_id": "c4505a55-bbc0-483c-a94e-1d6993b61181",
+    "followup_created_at": "2026-11-26T02:09:27.017545+08:00"
   },
   "audit": [
     {
-      "seq": 16,
-      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+      "seq": 20,
+      "request_id": "d7239114-55e6-4cd7-85ca-bffc71444563",
       "proposal_id": null,
       "event": "retrieved",
       "actor": "assistant",
@@ -125,11 +334,11 @@
           "tms-closure"
         ]
       },
-      "at": "2026-11-26T01:28:19.248559+08:00"
+      "at": "2026-11-26T02:09:27.006373+08:00"
     },
     {
-      "seq": 17,
-      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+      "seq": 21,
+      "request_id": "d7239114-55e6-4cd7-85ca-bffc71444563",
       "proposal_id": null,
       "event": "lookup_status",
       "actor": "assistant",
@@ -144,7 +353,7 @@
         "basis": "after_notice_observation",
         "centre": "tai-mo-shan",
         "status": "unknown",
-        "message": "Renovation of the entire Tai Mo Shan visitor centre. The snapshot recorded this on 2026-11-26 with no end date. The status on 2027-01-02 is unconfirmed.",
+        "message": "Renovation of the entire Tai Mo Shan visitor centre. The snapshot recorded this notice on 2026-11-26 with no end date. Reopening as of 2027-01-02 is unconfirmed.",
         "notices": [
           {
             "to": null,
@@ -171,12 +380,12 @@
         "snapshot_date": "2026-11-26",
         "published_hours": "09:30–16:30"
       },
-      "at": "2026-11-26T01:28:19.248749+08:00"
+      "at": "2026-11-26T02:09:27.006504+08:00"
     },
     {
-      "seq": 18,
-      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
-      "proposal_id": "d8e79fde-e95a-432a-8e20-7f23dcb70213",
+      "seq": 22,
+      "request_id": "d7239114-55e6-4cd7-85ca-bffc71444563",
+      "proposal_id": "a509abb2-7b84-4d40-b713-0ded9c6f7bca",
       "event": "proposal_staged",
       "actor": "assistant",
       "source_ids": [
@@ -189,11 +398,11 @@
         "tool": "propose_followup",
         "state": "pending"
       },
-      "at": "2026-11-26T01:28:19.249119+08:00"
+      "at": "2026-11-26T02:09:27.006822+08:00"
     },
     {
-      "seq": 19,
-      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+      "seq": 23,
+      "request_id": "d7239114-55e6-4cd7-85ca-bffc71444563",
       "proposal_id": null,
       "event": "reply",
       "actor": "assistant",
@@ -211,12 +420,12 @@
         ],
         "passage_ids": []
       },
-      "at": "2026-11-26T01:28:19.249232+08:00"
+      "at": "2026-11-26T02:09:27.006880+08:00"
     },
     {
-      "seq": 20,
-      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
-      "proposal_id": "d8e79fde-e95a-432a-8e20-7f23dcb70213",
+      "seq": 24,
+      "request_id": "d7239114-55e6-4cd7-85ca-bffc71444563",
+      "proposal_id": "a509abb2-7b84-4d40-b713-0ded9c6f7bca",
       "event": "review_decided",
       "actor": "demo-reviewer",
       "source_ids": [
@@ -230,12 +439,12 @@
         "state": "approved",
         "decision": "approve"
       },
-      "at": "2026-11-26T01:28:19.260886+08:00"
+      "at": "2026-11-26T02:09:27.017442+08:00"
     },
     {
-      "seq": 21,
-      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
-      "proposal_id": "d8e79fde-e95a-432a-8e20-7f23dcb70213",
+      "seq": 25,
+      "request_id": "d7239114-55e6-4cd7-85ca-bffc71444563",
+      "proposal_id": "a509abb2-7b84-4d40-b713-0ded9c6f7bca",
       "event": "followup_created",
       "actor": "demo-reviewer",
       "source_ids": [
@@ -247,9 +456,9 @@
       "detail": {
         "state": "approved",
         "decision": "approve",
-        "followup_id": "9cc930b9-fe18-452a-b672-144f21a87c1f"
+        "followup_id": "c4505a55-bbc0-483c-a94e-1d6993b61181"
       },
-      "at": "2026-11-26T01:28:19.261193+08:00"
+      "at": "2026-11-26T02:09:27.017664+08:00"
     }
   ]
 }

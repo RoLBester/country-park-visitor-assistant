@@ -36,6 +36,15 @@ DETAILS = {
     "A10": ["09:30–16:30", "1 July 2026", "no reopening date"],
     "A11": ["before opening", "during service"],
     "A12": ["maintained footpaths"],
+    "A13": [
+        "accessible toilet",
+        "inside the centre",
+        "closed for renovation",
+        "1 July 2026",
+        "no reopening date",
+    ],
+    "A14": ["admission", "free"],
+    "A15": ["accessible parking", "car park"],
 }
 
 
@@ -48,8 +57,10 @@ def exercise(client, case):
         "decision": reply["decision"],
         "answer": reply["answer"],
         "source_ids": sources,
+        "retrieved_passage_ids": reply["retrieved_passage_ids"],
         "passage_ids": reply["selected_passage_ids"],
         "tools": reply["tools_used"],
+        "proposal_state": reply["proposal"]["state"] if reply["proposal"] else None,
     }
     status = reply["lookup"]
     if status:
@@ -60,6 +71,7 @@ def exercise(client, case):
             centre=status["centre"],
             local_date=status["local_date"],
             proposal=bool(reply["proposal"]),
+            notices=status["notices"],
         )
     try:
         if case["group"] == "approval":
@@ -68,10 +80,23 @@ def exercise(client, case):
             assert reply["decision"] == case["decision"], "decision"
             assert set(case["sources"]) <= set(sources), "supporting source"
             assert all(
+                text.casefold() in reply["answer"].casefold()
+                for text in case.get("answer_contains", [])
+            ), "answer content"
+            assert all(
                 r["url"].startswith("https://") and r["locators"]
                 for r in reply["citations"]
             )
             if case["group"] == "guidance":
+                audit = client.get(
+                    f"/review/requests/{reply['request_id']}/audit", headers=headers()
+                ).json()
+                for event in audit:
+                    if event["event"] == "indoor_facility":
+                        actual["indoor_facility"] = event["detail"]
+                assert (
+                    set(sources) == set(case["sources"]) and reply["proposal"] is None
+                )
                 assert set(case["passages"]) == set(reply["selected_passage_ids"]), (
                     "specific supporting passages"
                 )
@@ -100,6 +125,20 @@ def exercise(client, case):
                     case["basis"],
                 ), "status or calendar rule"
                 assert bool(reply["proposal"]) == case["proposal"], "draft outcome"
+                assert actual["proposal_state"] == (
+                    "pending" if case["proposal"] else None
+                )
+                direct = client.get(
+                    "/status",
+                    params={
+                        "centre": case["centre"],
+                        "local_date": case["date"],
+                        "area": case["area"],
+                    },
+                )
+                assert direct.status_code == 200 and direct.json() == status, (
+                    "/status and /ask differ"
+                )
                 assert set(case.get("notice_areas", [])) <= {
                     n["area"] for n in status["notices"]
                 }
@@ -118,6 +157,8 @@ def exercise(client, case):
                     not reply["tools_used"]
                     and not reply["proposal"]
                     and not reply["selected_passage_ids"]
+                    and not sources
+                    and status is None
                 )
     except (AssertionError, KeyError, TypeError, StopIteration) as exc:
         return {
@@ -136,7 +177,20 @@ def main():
     runtime = {
         "adapter": args.adapter,
         "python": sys.version.split()[0],
-        "fastapi": version("fastapi"),
+        **{
+            name: version(name)
+            for name in (
+                "fastapi",
+                "starlette",
+                "uvicorn",
+                "pydantic",
+                "psycopg",
+                "psycopg-binary",
+                "pytest",
+                "httpx",
+                "httpx2",
+            )
+        },
     }
     if args.adapter == "ollama":
         host = os.environ["OLLAMA_HOST"].rstrip("/")

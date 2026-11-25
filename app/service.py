@@ -3,7 +3,7 @@ from uuid import uuid4
 from . import db
 from .context import resolve
 from .model import ModelUnavailable
-from .search import retrieve
+from .search import listed_indoor_facility, retrieve
 from .snapshot import DAY, fact_citations, lookup
 from .types import DraftTool, Lookup, Question, Reply, Selection
 
@@ -110,6 +110,20 @@ def ask(q: Question, model):
             selection = Selection.model_validate(action.args)
             if not set(selection.passage_ids) <= found.keys():
                 raise ValueError("A citation was outside the retrieved records.")
+            if listed_indoor_facility(q.question, ctx.centre, found):
+                pair = ["tms-access", "tms-closure"]
+                trace.append(
+                    (
+                        "indoor_facility",
+                        [found[k]["source_id"] for k in pair],
+                        {
+                            "model_decision": selection.decision,
+                            "model_passage_ids": selection.passage_ids,
+                            "passage_ids": pair,
+                        },
+                    )
+                )
+                selection = Selection(decision="answer", passage_ids=pair)
             if selection.decision == "clarify":
                 reply.decision, reply.answer = "clarify", CLARIFY
             elif selection.decision == "answer" and selection.passage_ids:
@@ -117,8 +131,8 @@ def ask(q: Question, model):
                 if not ctx.centre and any(p["centre"] for p in facts):
                     reply.decision, reply.answer = "clarify", CLARIFY
                 else:
-                    # A general timetable for a closed site must carry its recorded closure.
-                    if any(p["id"] == "tms-hours" for p in facts):
+                    # The renovation covers the centre and its indoor facilities.
+                    if {"tms-hours", "tms-access"} & set(selection.passage_ids):
                         if "tms-closure" not in found:
                             return db.save_request(reply, None, trace)
                         if all(p["id"] != "tms-closure" for p in facts):

@@ -5,7 +5,7 @@
     "centre": "sai-kung",
     "locator": "Opening Hour",
     "text": "Sai Kung: AFCD lists 09:30–16:30 on Mondays and Wednesdays through Sundays. Tuesdays follow those hours on public holidays. The first two lunar new year days are closed.",
-    "keywords": "usual regular typical normal opening hours timetable weekdays Tuesday weekend schedule"
+    "keywords": "usual regular typical normal opening hours timetable weekly weekdays Tuesday weekend schedule"
   },
   {
     "id": "sm-hours",
@@ -13,7 +13,7 @@
     "centre": "shing-mun",
     "locator": "Opening Hour",
     "text": "Shing Mun: AFCD lists 09:30–16:30 on Mondays and Wednesdays through Sundays. Tuesdays follow those hours on public holidays. The first two lunar new year days are closed.",
-    "keywords": "usual regular typical normal opening hours timetable weekdays Tuesday weekend schedule"
+    "keywords": "usual regular typical normal opening hours timetable weekly weekdays Tuesday weekend schedule"
   },
   {
     "id": "tms-hours",
@@ -21,7 +21,7 @@
     "centre": "tai-mo-shan",
     "locator": "Opening Hour",
     "text": "Tai Mo Shan: AFCD lists 09:30–16:30 on Mondays and Wednesdays through Sundays. Tuesdays follow those hours on public holidays. The first two lunar new year days are closed.",
-    "keywords": "usual regular typical normal opening hours timetable weekdays Tuesday weekend schedule"
+    "keywords": "usual regular typical normal opening hours timetable weekly weekdays Tuesday weekend schedule"
   },
   {
     "id": "sk-location",
@@ -108,8 +108,16 @@
     "source_id": "afcd-tms",
     "centre": "tai-mo-shan",
     "locator": "Barrier-free Facilities",
-    "text": "Tai Mo Shan lists ramp access, an accessible toilet inside the centre and accessible parking at the car park.",
-    "keywords": "wheelchair accessible facilities parking car ramp toilet"
+    "text": "Tai Mo Shan lists ramp access and an accessible toilet inside the centre.",
+    "keywords": "wheelchair accessible accessibility facilities ramp toilet restroom bathroom"
+  },
+  {
+    "id": "tms-parking",
+    "source_id": "afcd-tms",
+    "centre": "tai-mo-shan",
+    "locator": "Barrier-free Facilities / Car Park",
+    "text": "AFCD lists an accessible parking space at the Tai Mo Shan car park.",
+    "keywords": "accessible parking space car park"
   },
   {
     "id": "tms-phone",
@@ -124,7 +132,7 @@
     "source_id": "afcd-tms-notice",
     "centre": "tai-mo-shan",
     "locator": "Bilingual closure notice, English paragraph",
-    "text": "AFCD's renovation notice covers the entire Tai Mo Shan visitor centre from 1 July 2026. It gives no reopening date.",
+    "text": "AFCD reported that the entire Tai Mo Shan visitor centre closed for renovation on 1 July 2026. Its notice gives no reopening date.",
     "keywords": "renovation closure reopening works closed when until reason"
   },
   {
@@ -157,7 +165,7 @@
     "centre": null,
     "locator": "Question 8, Country Park Visitor Centres",
     "text": "Admission to country park visitor centres is free.",
-    "keywords": "price cost admission ticket entrance entry fee charge pay visit free"
+    "keywords": "price cost admission ticket entrance enter entry fee charge pay visit"
   },
   {
     "id": "footpaths",
