@@ -1,0 +1,19 @@
+[project]
+name = "country-park-visitor-assistant"
+version = "1.0.0"
+requires-python = "==3.15.*"
+dependencies = [
+    "fastapi==0.165.0",
+    "httpx==0.28.1",
+    "ollama==0.6.3",
+    "psycopg[binary]==3.3.9",
+    "pydantic==2.14.4",
+    "uvicorn==0.54.0",
+]
+
+[dependency-groups]
+checks = ["httpx2==2.16.2", "pytest==9.2.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

@@ -1,0 +1,255 @@
+{
+  "model_adapter": "Fixture",
+  "snapshot": "2026-11-26",
+  "visitor_answer": {
+    "text": "At Shing Mun, ask the staff on duty about borrowing a map, hiking poles or a power bank.",
+    "citations": [
+      {
+        "source_id": "afcd-sm",
+        "title": "Shing Mun Country Park Visitor Centre",
+        "url": "https://www.afcd.gov.hk/english/country/cou_lea/cou_lea_ven/shingmun.html",
+        "retrieved_at": "2026-11-26T00:59:04+08:00",
+        "scope": "Shing Mun centre",
+        "locators": [
+          "Hiking Equipment Loan Service"
+        ]
+      }
+    ]
+  },
+  "closure": {
+    "date": "2026-11-26",
+    "status": "notice_closed",
+    "published_hours": "09:30–16:30",
+    "text": "Renovation of the entire Tai Mo Shan visitor centre. A closure was recorded as of 2026-11-26. Effective from 2026-07-01. No reopening date was published.",
+    "citations": [
+      {
+        "source_id": "afcd-tms",
+        "title": "Tai Mo Shan Country Park Visitor Centre",
+        "url": "https://www.afcd.gov.hk/english/country/cou_lea/cou_lea_ven/taimoshan.html",
+        "retrieved_at": "2026-11-26T00:59:04+08:00",
+        "scope": "Tai Mo Shan centre",
+        "locators": [
+          "Opening Hour",
+          "Renovation of the entire Tai Mo Shan visitor centre."
+        ]
+      },
+      {
+        "source_id": "hko-2026",
+        "title": "Gregorian-Lunar Calendar Conversion Table of 2026",
+        "url": "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2026e.txt",
+        "retrieved_at": "2026-11-26T00:59:09+08:00",
+        "scope": "Hong Kong lunar dates in 2026",
+        "locators": [
+          "Gregorian date 2026-11-26"
+        ]
+      },
+      {
+        "source_id": "hk-1823",
+        "title": "Hong Kong Public Holidays",
+        "url": "https://www.1823.gov.hk/common/ical/en.json",
+        "retrieved_at": "2026-11-26T00:59:04+08:00",
+        "scope": "Dated general holiday events",
+        "locators": [
+          "No dated holiday entry for 2026-11-26"
+        ]
+      },
+      {
+        "source_id": "afcd-tms-notice",
+        "title": "Notice of Temporary Closure – Tai Mo Shan Country Park Visitor Centre",
+        "url": "https://www.hiking.gov.hk/console/public/uploads/news/fd2be37e754a5b6f18f13b50323e587846fcf797.pdf",
+        "retrieved_at": "2026-11-26T01:03:24+08:00",
+        "scope": "Entire Tai Mo Shan visitor centre",
+        "locators": [
+          "Renovation of the entire Tai Mo Shan visitor centre."
+        ]
+      }
+    ]
+  },
+  "requested_visit": {
+    "date": "2027-01-02",
+    "text": "Renovation of the entire Tai Mo Shan visitor centre. The snapshot recorded this on 2026-11-26 with no end date. The status on 2027-01-02 is unconfirmed. A local staff follow-up draft is awaiting reviewer approval."
+  },
+  "pending_proposal": {
+    "id": "d8e79fde-e95a-432a-8e20-7f23dcb70213",
+    "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+    "centre": "tai-mo-shan",
+    "reason": "Check the status on 2027-01-02 for the visitor.",
+    "source_ids": [
+      "afcd-tms",
+      "hko-2027",
+      "hk-1823",
+      "afcd-tms-notice"
+    ],
+    "state": "pending"
+  },
+  "approved_followup": {
+    "proposal_id": "d8e79fde-e95a-432a-8e20-7f23dcb70213",
+    "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+    "centre": "tai-mo-shan",
+    "reason": "Check the status on 2027-01-02 for the visitor.",
+    "source_ids": [
+      "afcd-tms",
+      "hko-2027",
+      "hk-1823",
+      "afcd-tms-notice"
+    ],
+    "state": "approved",
+    "reviewer": "demo-reviewer",
+    "decision": "approve",
+    "decided_at": "2026-11-26T01:28:19.260497+08:00",
+    "followup_id": "9cc930b9-fe18-452a-b672-144f21a87c1f",
+    "followup_created_at": "2026-11-26T01:28:19.261054+08:00"
+  },
+  "audit": [
+    {
+      "seq": 16,
+      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+      "proposal_id": null,
+      "event": "retrieved",
+      "actor": "assistant",
+      "source_ids": [
+        "afcd-tms",
+        "afcd-weather",
+        "afcd-faq",
+        "afcd-directory",
+        "afcd-tms-notice"
+      ],
+      "detail": {
+        "passage_ids": [
+          "tms-phone",
+          "tms-hours",
+          "weather-t8",
+          "weather-rain",
+          "admission",
+          "directory",
+          "tms-closure"
+        ]
+      },
+      "at": "2026-11-26T01:28:19.248559+08:00"
+    },
+    {
+      "seq": 17,
+      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+      "proposal_id": null,
+      "event": "lookup_status",
+      "actor": "assistant",
+      "source_ids": [
+        "afcd-tms",
+        "hko-2027",
+        "hk-1823",
+        "afcd-tms-notice"
+      ],
+      "detail": {
+        "area": "centre",
+        "basis": "after_notice_observation",
+        "centre": "tai-mo-shan",
+        "status": "unknown",
+        "message": "Renovation of the entire Tai Mo Shan visitor centre. The snapshot recorded this on 2026-11-26 with no end date. The status on 2027-01-02 is unconfirmed.",
+        "notices": [
+          {
+            "to": null,
+            "also": [
+              "afcd-tms"
+            ],
+            "area": "centre",
+            "from": "2026-07-01",
+            "kind": "closure",
+            "centre": "tai-mo-shan",
+            "source_id": "afcd-tms-notice",
+            "description": "Renovation of the entire Tai Mo Shan visitor centre.",
+            "observed_on": "2026-11-26"
+          }
+        ],
+        "timezone": "Asia/Hong_Kong",
+        "local_date": "2027-01-02",
+        "source_ids": [
+          "afcd-tms",
+          "hko-2027",
+          "hk-1823",
+          "afcd-tms-notice"
+        ],
+        "snapshot_date": "2026-11-26",
+        "published_hours": "09:30–16:30"
+      },
+      "at": "2026-11-26T01:28:19.248749+08:00"
+    },
+    {
+      "seq": 18,
+      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+      "proposal_id": "d8e79fde-e95a-432a-8e20-7f23dcb70213",
+      "event": "proposal_staged",
+      "actor": "assistant",
+      "source_ids": [
+        "afcd-tms",
+        "hko-2027",
+        "hk-1823",
+        "afcd-tms-notice"
+      ],
+      "detail": {
+        "tool": "propose_followup",
+        "state": "pending"
+      },
+      "at": "2026-11-26T01:28:19.249119+08:00"
+    },
+    {
+      "seq": 19,
+      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+      "proposal_id": null,
+      "event": "reply",
+      "actor": "assistant",
+      "source_ids": [
+        "afcd-tms",
+        "hko-2027",
+        "hk-1823",
+        "afcd-tms-notice"
+      ],
+      "detail": {
+        "decision": "status",
+        "tools_used": [
+          "lookup_status",
+          "propose_followup"
+        ],
+        "passage_ids": []
+      },
+      "at": "2026-11-26T01:28:19.249232+08:00"
+    },
+    {
+      "seq": 20,
+      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+      "proposal_id": "d8e79fde-e95a-432a-8e20-7f23dcb70213",
+      "event": "review_decided",
+      "actor": "demo-reviewer",
+      "source_ids": [
+        "afcd-tms",
+        "hko-2027",
+        "hk-1823",
+        "afcd-tms-notice"
+      ],
+      "detail": {
+        "from": "pending",
+        "state": "approved",
+        "decision": "approve"
+      },
+      "at": "2026-11-26T01:28:19.260886+08:00"
+    },
+    {
+      "seq": 21,
+      "request_id": "228ac69d-1655-4f9c-bd43-5da3177f4862",
+      "proposal_id": "d8e79fde-e95a-432a-8e20-7f23dcb70213",
+      "event": "followup_created",
+      "actor": "demo-reviewer",
+      "source_ids": [
+        "afcd-tms",
+        "hko-2027",
+        "hk-1823",
+        "afcd-tms-notice"
+      ],
+      "detail": {
+        "state": "approved",
+        "decision": "approve",
+        "followup_id": "9cc930b9-fe18-452a-b672-144f21a87c1f"
+      },
+      "at": "2026-11-26T01:28:19.261193+08:00"
+    }
+  ]
+}

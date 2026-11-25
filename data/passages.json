@@ -1,0 +1,202 @@
+[
+  {
+    "id": "sk-hours",
+    "source_id": "afcd-sk",
+    "centre": "sai-kung",
+    "locator": "Opening Hour",
+    "text": "Sai Kung: AFCD lists 09:30–16:30 on Mondays and Wednesdays through Sundays. Tuesdays follow those hours on public holidays. The first two lunar new year days are closed.",
+    "keywords": "usual regular typical normal opening hours timetable weekdays Tuesday weekend schedule"
+  },
+  {
+    "id": "sm-hours",
+    "source_id": "afcd-sm",
+    "centre": "shing-mun",
+    "locator": "Opening Hour",
+    "text": "Shing Mun: AFCD lists 09:30–16:30 on Mondays and Wednesdays through Sundays. Tuesdays follow those hours on public holidays. The first two lunar new year days are closed.",
+    "keywords": "usual regular typical normal opening hours timetable weekdays Tuesday weekend schedule"
+  },
+  {
+    "id": "tms-hours",
+    "source_id": "afcd-tms",
+    "centre": "tai-mo-shan",
+    "locator": "Opening Hour",
+    "text": "Tai Mo Shan: AFCD lists 09:30–16:30 on Mondays and Wednesdays through Sundays. Tuesdays follow those hours on public holidays. The first two lunar new year days are closed.",
+    "keywords": "usual regular typical normal opening hours timetable weekdays Tuesday weekend schedule"
+  },
+  {
+    "id": "sk-location",
+    "source_id": "afcd-sk",
+    "centre": "sai-kung",
+    "locator": "Introduction / How to go",
+    "text": "Sai Kung's centre is next to the bus stop at Pak Tam Chung.",
+    "keywords": "address location where situated"
+  },
+  {
+    "id": "sk-transit",
+    "source_id": "afcd-sk",
+    "centre": "sai-kung",
+    "locator": "How to go",
+    "text": "For Sai Kung, alight at Pak Tam Chung. Bus 94 and green minibuses 7 and 9 serve the stop. Bus 96R is listed for Sundays and public holidays.",
+    "keywords": "travel get there transport bus minibus route directions"
+  },
+  {
+    "id": "sk-toilet",
+    "source_id": "afcd-sk",
+    "centre": "sai-kung",
+    "locator": "Barrier-free Facilities",
+    "text": "The accessible toilet for the Sai Kung centre is at the nearby kiosk.",
+    "keywords": "accessible wheelchair toilet restroom bathroom kiosk"
+  },
+  {
+    "id": "sk-exhibits",
+    "source_id": "afcd-sk",
+    "centre": "sai-kung",
+    "locator": "Introduction",
+    "text": "Sai Kung's exhibits cover trails, recreation, ecology and local history. Its multimedia area has videos and books.",
+    "keywords": "exhibits exhibitions displays about videos books multimedia"
+  },
+  {
+    "id": "sk-phone",
+    "source_id": "afcd-sk",
+    "centre": "sai-kung",
+    "locator": "Enquiry",
+    "text": "The Sai Kung visitor centre lists 2792 7365 for enquiries.",
+    "keywords": "contact number telephone phone call enquiry"
+  },
+  {
+    "id": "sm-loans",
+    "source_id": "afcd-sm",
+    "centre": "shing-mun",
+    "locator": "Hiking Equipment Loan Service",
+    "text": "At Shing Mun, ask the staff on duty about borrowing a map, hiking poles or a power bank.",
+    "keywords": "borrow loan rental walking sticks hiking gear equipment charger charging battery maps"
+  },
+  {
+    "id": "sm-transit",
+    "source_id": "afcd-sm",
+    "centre": "shing-mun",
+    "locator": "How to go",
+    "text": "Take green minibus 82 to Pineapple Dam, then climb the steps for about 50 metres to the Shing Mun centre.",
+    "keywords": "get there transport directions bus minibus walk stairs route"
+  },
+  {
+    "id": "sm-exhibits",
+    "source_id": "afcd-sm",
+    "centre": "shing-mun",
+    "locator": "Exhibits include",
+    "text": "Shing Mun's displays cover park history, paperbark trees, wartime relics and biodiversity.",
+    "keywords": "exhibits exhibition galleries see learn display"
+  },
+  {
+    "id": "sm-phone",
+    "source_id": "afcd-sm",
+    "centre": "shing-mun",
+    "locator": "Enquiry",
+    "text": "The Shing Mun visitor centre lists 2489 1362 for enquiries.",
+    "keywords": "contact number telephone phone call enquiry"
+  },
+  {
+    "id": "tms-bus",
+    "source_id": "afcd-tms",
+    "centre": "tai-mo-shan",
+    "locator": "How to go",
+    "text": "For Tai Mo Shan, ride bus 51 from Nina Tower to the country park stop. AFCD gives a walk of about five minutes along Tai Mo Shan Road.",
+    "keywords": "transport bus route get there minibus directions"
+  },
+  {
+    "id": "tms-access",
+    "source_id": "afcd-tms",
+    "centre": "tai-mo-shan",
+    "locator": "Barrier-free Facilities",
+    "text": "Tai Mo Shan lists ramp access, an accessible toilet inside the centre and accessible parking at the car park.",
+    "keywords": "wheelchair accessible facilities parking car ramp toilet"
+  },
+  {
+    "id": "tms-phone",
+    "source_id": "afcd-tms",
+    "centre": "tai-mo-shan",
+    "locator": "Enquiry",
+    "text": "The Tai Mo Shan visitor centre lists 2498 9326 for enquiries.",
+    "keywords": "contact number telephone phone call enquiry"
+  },
+  {
+    "id": "tms-closure",
+    "source_id": "afcd-tms-notice",
+    "centre": "tai-mo-shan",
+    "locator": "Bilingual closure notice, English paragraph",
+    "text": "AFCD's renovation notice covers the entire Tai Mo Shan visitor centre from 1 July 2026. It gives no reopening date.",
+    "keywords": "renovation closure reopening works closed when until reason"
+  },
+  {
+    "id": "tms-tour",
+    "source_id": "afcd-tms-tour",
+    "centre": "tai-mo-shan",
+    "locator": "Remark",
+    "text": "The Tai Mo Shan guided-tour page repeats the centre-wide renovation closure.",
+    "keywords": "public guided tours programme renovation cancellation"
+  },
+  {
+    "id": "tms-photo",
+    "source_id": "afcd-photo",
+    "centre": "tai-mo-shan",
+    "locator": "Activity table / Hiking Etiquette / Remark",
+    "text": "The Hiking Etiquette photo exhibition at Tai Mo Shan is suspended for maintenance. The exhibition notice gives no start or end date.",
+    "keywords": "hiking etiquette photo exhibition photography suspension photographs maintenance"
+  },
+  {
+    "id": "sk-photo",
+    "source_id": "afcd-photo",
+    "centre": "sai-kung",
+    "locator": "Activity table / Hiking Etiquette / Date & Location",
+    "text": "The Hiking Etiquette photo exhibition lists Sai Kung for weekends and public holidays, excluding the first two lunar new year days. Session times are unspecified.",
+    "keywords": "hiking etiquette photo exhibition photography dates photographs schedule"
+  },
+  {
+    "id": "admission",
+    "source_id": "afcd-faq",
+    "centre": null,
+    "locator": "Question 8, Country Park Visitor Centres",
+    "text": "Admission to country park visitor centres is free.",
+    "keywords": "price cost admission ticket entrance entry fee charge pay visit free"
+  },
+  {
+    "id": "footpaths",
+    "source_id": "afcd-faq",
+    "centre": null,
+    "locator": "Question 9, Hiking",
+    "text": "AFCD advises hikers to stay on maintained footpaths.",
+    "keywords": "hiking trails advice paths footpaths walk maintained"
+  },
+  {
+    "id": "leaflets",
+    "source_id": "afcd-faq",
+    "centre": null,
+    "locator": "Question 5, Booklets and Leaflets",
+    "text": "AFCD has stopped printing country park booklets and leaflets. Visitor information is available on its website.",
+    "keywords": "printed booklets leaflets paper brochures printed pamphlets"
+  },
+  {
+    "id": "weather-t8",
+    "source_id": "afcd-weather",
+    "centre": null,
+    "locator": "Inclement Weather / Tropical Cyclone Warning Signal No. 8 or above",
+    "text": "AFCD generally closes its centres at typhoon signal 8 or higher. If advance warning comes during service, staff finish serving visitors already present.",
+    "keywords": "typhoon tropical cyclone signal 8 storm weather arrangements"
+  },
+  {
+    "id": "weather-rain",
+    "source_id": "afcd-weather",
+    "centre": null,
+    "locator": "Inclement Weather / Black Rainstorm or Extreme Condition",
+    "text": "A black rainstorm warning or extreme-condition announcement before opening generally closes AFCD centres. If issued during service, they remain open.",
+    "keywords": "black rainstorm extreme condition warning weather rain arrangements"
+  },
+  {
+    "id": "directory",
+    "source_id": "afcd-directory",
+    "centre": null,
+    "locator": "Visitor Centres list",
+    "text": "AFCD's directory lists Sai Kung, Shing Mun and Tai Mo Shan among its visitor centres.",
+    "keywords": "directory which centres supported locations list"
+  }
+]

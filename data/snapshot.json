@@ -1,0 +1,189 @@
+{
+  "snapshot_date": "2026-11-26",
+  "timezone": "Asia/Hong_Kong",
+  "calendar_range": [
+    "2026-01-01",
+    "2027-12-31"
+  ],
+  "sources": {
+    "afcd-directory": {
+      "title": "Venues – Visitor Centres",
+      "publisher": "Agriculture, Fisheries and Conservation Department",
+      "url": "https://www.afcd.gov.hk/english/country/cou_lea/cou_lea_ven/cou_lea_ven.html",
+      "retrieved_at": "2026-11-26T00:59:04+08:00",
+      "scope": "Visitor-centre directory",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "afcd-sk": {
+      "title": "Sai Kung Country Park Visitor Centre",
+      "publisher": "Agriculture, Fisheries and Conservation Department",
+      "url": "https://www.afcd.gov.hk/english/country/cou_lea/cou_lea_ven/saikung.html",
+      "retrieved_at": "2026-11-26T00:59:04+08:00",
+      "scope": "Sai Kung centre",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "afcd-sm": {
+      "title": "Shing Mun Country Park Visitor Centre",
+      "publisher": "Agriculture, Fisheries and Conservation Department",
+      "url": "https://www.afcd.gov.hk/english/country/cou_lea/cou_lea_ven/shingmun.html",
+      "retrieved_at": "2026-11-26T00:59:04+08:00",
+      "scope": "Shing Mun centre",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "afcd-tms": {
+      "title": "Tai Mo Shan Country Park Visitor Centre",
+      "publisher": "Agriculture, Fisheries and Conservation Department",
+      "url": "https://www.afcd.gov.hk/english/country/cou_lea/cou_lea_ven/taimoshan.html",
+      "retrieved_at": "2026-11-26T00:59:04+08:00",
+      "scope": "Tai Mo Shan centre",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "afcd-faq": {
+      "title": "Country & Marine Parks – Frequently Asked Questions",
+      "publisher": "Agriculture, Fisheries and Conservation Department",
+      "url": "https://www.afcd.gov.hk/english/faq/faq_cou/faq_cou.html",
+      "retrieved_at": "2026-11-26T00:59:04+08:00",
+      "scope": "Country parks and their visitor centres",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "afcd-weather": {
+      "title": "Address and Opening Hours – Inclement Weather Special Arrangements",
+      "publisher": "Agriculture, Fisheries and Conservation Department",
+      "url": "https://www.afcd.gov.hk/english/aboutus/Address_and_Opening_Hours/Address_and_Opening_Hours.html",
+      "retrieved_at": "2026-11-26T00:59:04+08:00",
+      "scope": "AFCD offices, counters and centres",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "afcd-tms-notice": {
+      "title": "Notice of Temporary Closure – Tai Mo Shan Country Park Visitor Centre",
+      "publisher": "Agriculture, Fisheries and Conservation Department",
+      "url": "https://www.hiking.gov.hk/console/public/uploads/news/fd2be37e754a5b6f18f13b50323e587846fcf797.pdf",
+      "retrieved_at": "2026-11-26T01:03:24+08:00",
+      "scope": "Entire Tai Mo Shan visitor centre",
+      "effective_from": "2026-07-01",
+      "effective_to": null
+    },
+    "afcd-photo": {
+      "title": "Hiking Etiquette – Photo Exhibition",
+      "publisher": "Agriculture, Fisheries and Conservation Department",
+      "url": "https://www.natureintouch.gov.hk/en/hiking-etiquette",
+      "retrieved_at": "2026-11-26T00:59:04+08:00",
+      "scope": "Named photo exhibition at listed venues",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "afcd-tms-tour": {
+      "title": "Tai Mo Shan Country Park Visitor Centre Guided Tour",
+      "publisher": "Agriculture, Fisheries and Conservation Department",
+      "url": "https://www.natureintouch.gov.hk/en/tai-mo-shan-country-park-visitor-centre-guided-tour",
+      "retrieved_at": "2026-11-26T00:59:04+08:00",
+      "scope": "Tai Mo Shan guided tours and renovation remark",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "afcd-sm-tour": {
+      "title": "Shing Mun Country Park Visitor Centre Guided Tour",
+      "publisher": "Agriculture, Fisheries and Conservation Department",
+      "url": "https://www.natureintouch.gov.hk/en/shing-mun-country-park-visitor-centre-guided-tour",
+      "retrieved_at": "2026-11-26T00:59:04+08:00",
+      "scope": "Shing Mun public guided tour",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "afcd-school": {
+      "title": "Country Park Visitor Centre School Education Programmes",
+      "publisher": "Agriculture, Fisheries and Conservation Department",
+      "url": "https://www.natureintouch.gov.hk/en/country-park-visitor-centre-school-education-programmes",
+      "retrieved_at": "2026-11-26T00:59:04+08:00",
+      "scope": "Visitor-centre school programmes",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "hk-1823-index": {
+      "title": "Hong Kong Public Holidays Data (English)",
+      "publisher": "Digital Policy Office / 1823",
+      "url": "https://data.gov.hk/en-data/dataset/hk-dpo-statistic-cal/resource/7ce98bb9-6330-414d-83fa-48aa4f253789",
+      "retrieved_at": "2026-11-26T00:59:06+08:00",
+      "scope": "1823 dataset coverage",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "hk-1823": {
+      "title": "Hong Kong Public Holidays",
+      "publisher": "Digital Policy Office / 1823",
+      "url": "https://www.1823.gov.hk/common/ical/en.json",
+      "retrieved_at": "2026-11-26T00:59:04+08:00",
+      "scope": "Dated general holiday events",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "hko-index": {
+      "title": "Gregorian-Lunar Calendar Conversion Table",
+      "publisher": "Hong Kong Observatory",
+      "url": "https://www.hko.gov.hk/en/gts/time/conversion.htm",
+      "retrieved_at": "2026-11-26T00:59:09+08:00",
+      "scope": "Annual conversion tables",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "hko-2026": {
+      "title": "Gregorian-Lunar Calendar Conversion Table of 2026",
+      "publisher": "Hong Kong Observatory",
+      "url": "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2026e.txt",
+      "retrieved_at": "2026-11-26T00:59:09+08:00",
+      "scope": "Hong Kong lunar dates in 2026",
+      "effective_from": null,
+      "effective_to": null
+    },
+    "hko-2027": {
+      "title": "Gregorian-Lunar Calendar Conversion Table of 2027",
+      "publisher": "Hong Kong Observatory",
+      "url": "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2027e.txt",
+      "retrieved_at": "2026-11-26T00:59:09+08:00",
+      "scope": "Hong Kong lunar dates in 2027",
+      "effective_from": null,
+      "effective_to": null
+    }
+  },
+  "schedule": {
+    "hours": "09:30–16:30",
+    "closed_weekday": 1,
+    "rules": {
+      "sai-kung": "sk-hours",
+      "shing-mun": "sm-hours",
+      "tai-mo-shan": "tms-hours"
+    }
+  },
+  "notices": [
+    {
+      "centre": "tai-mo-shan",
+      "area": "centre",
+      "kind": "closure",
+      "source_id": "afcd-tms-notice",
+      "also": [
+        "afcd-tms"
+      ],
+      "from": "2026-07-01",
+      "to": null,
+      "observed_on": "2026-11-26",
+      "description": "Renovation of the entire Tai Mo Shan visitor centre."
+    },
+    {
+      "centre": "tai-mo-shan",
+      "area": "photo-exhibition",
+      "kind": "closure",
+      "source_id": "afcd-photo",
+      "also": [],
+      "from": null,
+      "to": null,
+      "observed_on": "2026-11-26",
+      "description": "Maintenance suspension of the Hiking Etiquette photo exhibition at Tai Mo Shan."
+    }
+  ]
+}

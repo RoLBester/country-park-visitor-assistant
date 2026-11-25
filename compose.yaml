@@ -1,0 +1,44 @@
+services:
+  db:
+    image: pgvector/pgvector:0.8.7-pg19-trixie@sha256:ace863afa68a13560603dc7366fad0adb4f5ddd0a21c8f06418195f32e03fa08
+    environment:
+      POSTGRES_DB: parks
+      POSTGRES_USER: parks
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Generate .env as described in the README}
+      TZ: Asia/Hong_Kong
+      PGTZ: Asia/Hong_Kong
+    volumes:
+      - park-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U parks -d parks"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PGHOST: db
+      PGDATABASE: parks
+      PGUSER: parks
+      PGPASSWORD: ${POSTGRES_PASSWORD:?Generate .env}
+      PGTZ: Asia/Hong_Kong
+      REVIEWER_ID: ${REVIEWER_ID:-demo-reviewer}
+      REVIEWER_TOKEN: ${REVIEWER_TOKEN:?Generate .env}
+      VISITOR_TOKEN: ${VISITOR_TOKEN:?Generate .env}
+      MODEL_PROVIDER: ${MODEL_PROVIDER:-fixture}
+      OLLAMA_HOST: ${OLLAMA_HOST:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-gpt-oss:20b}
+    ports:
+      - "127.0.0.1:${APP_PORT:-8765}:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://localhost:8000/health', timeout=3).read()"]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+volumes:
+  park-data:

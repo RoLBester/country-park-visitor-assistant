@@ -1,0 +1,14 @@
+*
+!app/
+!app/**
+!data/
+!data/**
+!evaluation/
+!evaluation/*.py
+!evaluation/cases.json
+!tests/
+!tests/**
+!requirements.lock
+!pyproject.toml
+**/__pycache__/
+**/*.pyc

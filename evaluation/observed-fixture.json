@@ -1,0 +1,949 @@
+{
+  "finished_at": "2026-11-26T01:28:18+08:00",
+  "snapshot": "2026-11-26",
+  "runtime": {
+    "adapter": "fixture",
+    "python": "3.15.2",
+    "fastapi": "0.165.0",
+    "postgres": "19.0 (Debian 19.0-1.pgdg13+1)",
+    "pgvector": "0.8.7"
+  },
+  "scores": {
+    "guidance": {
+      "passed": 12,
+      "total": 12
+    },
+    "lookup": {
+      "passed": 16,
+      "total": 16
+    },
+    "boundaries": {
+      "passed": 6,
+      "total": 6
+    },
+    "approval": {
+      "passed": 9,
+      "total": 9
+    }
+  },
+  "cases": [
+    {
+      "id": "A01",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "Admission to country park visitor centres is free.",
+        "source_ids": [
+          "afcd-faq"
+        ],
+        "passage_ids": [
+          "admission"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "A02",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "At Shing Mun, ask the staff on duty about borrowing a map, hiking poles or a power bank.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [
+          "sm-loans"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "A03",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "The accessible toilet for the Sai Kung centre is at the nearby kiosk.",
+        "source_ids": [
+          "afcd-sk"
+        ],
+        "passage_ids": [
+          "sk-toilet"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "A04",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "For Tai Mo Shan, ride bus 51 from Nina Tower to the country park stop. AFCD gives a walk of about five minutes along Tai Mo Shan Road.",
+        "source_ids": [
+          "afcd-tms"
+        ],
+        "passage_ids": [
+          "tms-bus"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "A05",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "The Tai Mo Shan visitor centre lists 2498 9326 for enquiries.",
+        "source_ids": [
+          "afcd-tms"
+        ],
+        "passage_ids": [
+          "tms-phone"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "A06",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "Take green minibus 82 to Pineapple Dam, then climb the steps for about 50 metres to the Shing Mun centre.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [
+          "sm-transit"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "A07",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "Shing Mun's displays cover park history, paperbark trees, wartime relics and biodiversity.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [
+          "sm-exhibits"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "A08",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "AFCD has stopped printing country park booklets and leaflets. Visitor information is available on its website.",
+        "source_ids": [
+          "afcd-faq"
+        ],
+        "passage_ids": [
+          "leaflets"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "A09",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "Sai Kung: AFCD lists 09:30–16:30 on Mondays and Wednesdays through Sundays. Tuesdays follow those hours on public holidays. The first two lunar new year days are closed.",
+        "source_ids": [
+          "afcd-sk"
+        ],
+        "passage_ids": [
+          "sk-hours"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "A10",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "Tai Mo Shan: AFCD lists 09:30–16:30 on Mondays and Wednesdays through Sundays. Tuesdays follow those hours on public holidays. The first two lunar new year days are closed. AFCD's renovation notice covers the entire Tai Mo Shan visitor centre from 1 July 2026. It gives no reopening date.",
+        "source_ids": [
+          "afcd-tms",
+          "afcd-tms-notice"
+        ],
+        "passage_ids": [
+          "tms-hours",
+          "tms-closure"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "A11",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "A black rainstorm warning or extreme-condition announcement before opening generally closes AFCD centres. If issued during service, they remain open.",
+        "source_ids": [
+          "afcd-weather"
+        ],
+        "passage_ids": [
+          "weather-rain"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "A12",
+      "group": "guidance",
+      "passed": true,
+      "observed": {
+        "decision": "answer",
+        "answer": "AFCD advises hikers to stay on maintained footpaths.",
+        "source_ids": [
+          "afcd-faq"
+        ],
+        "passage_ids": [
+          "footpaths"
+        ],
+        "tools": []
+      }
+    },
+    {
+      "id": "L01",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Sai Kung's published hours for 2026-11-26 are 09:30–16:30. Actual opening on the day is unconfirmed.",
+        "source_ids": [
+          "afcd-sk",
+          "hko-2026",
+          "hk-1823"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "published_hours",
+        "basis": "regular_hours",
+        "area": "centre",
+        "centre": "sai-kung",
+        "local_date": "2026-11-26",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L02",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Shing Mun is scheduled to close on this Tuesday. Actual opening on the day is unconfirmed.",
+        "source_ids": [
+          "afcd-sm",
+          "hko-2026",
+          "hk-1823"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "scheduled_closed",
+        "basis": "ordinary_tuesday",
+        "area": "centre",
+        "centre": "shing-mun",
+        "local_date": "2026-11-24",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L03",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Sai Kung's published hours for 2026-04-07 (The day following Easter Monday) are 09:30–16:30. Actual opening on the day is unconfirmed.",
+        "source_ids": [
+          "afcd-sk",
+          "hko-2026",
+          "hk-1823"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "published_hours",
+        "basis": "public_holiday",
+        "area": "centre",
+        "centre": "sai-kung",
+        "local_date": "2026-04-07",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L04",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Shing Mun is scheduled to close on lunar new year day 1. Actual opening on the day is unconfirmed.",
+        "source_ids": [
+          "afcd-sm",
+          "hko-2026",
+          "hk-1823"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "scheduled_closed",
+        "basis": "lunar_days_1_2",
+        "area": "centre",
+        "centre": "shing-mun",
+        "local_date": "2026-02-17",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L05",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Sai Kung is scheduled to close on lunar new year day 2. Actual opening on the day is unconfirmed.",
+        "source_ids": [
+          "afcd-sk",
+          "hko-2027",
+          "hk-1823"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "scheduled_closed",
+        "basis": "lunar_days_1_2",
+        "area": "centre",
+        "centre": "sai-kung",
+        "local_date": "2027-02-07",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L06",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Shing Mun's published hours for 2027-02-09 (The fourth day of Lunar New Year) are 09:30–16:30. Actual opening on the day is unconfirmed.",
+        "source_ids": [
+          "afcd-sm",
+          "hko-2027",
+          "hk-1823"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "published_hours",
+        "basis": "public_holiday",
+        "area": "centre",
+        "centre": "shing-mun",
+        "local_date": "2027-02-09",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L07",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Sai Kung's published hours for 2027-02-08 (The third day of Lunar New Year) are 09:30–16:30. Actual opening on the day is unconfirmed.",
+        "source_ids": [
+          "afcd-sk",
+          "hko-2027",
+          "hk-1823"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "published_hours",
+        "basis": "public_holiday",
+        "area": "centre",
+        "centre": "sai-kung",
+        "local_date": "2027-02-08",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L08",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Renovation of the entire Tai Mo Shan visitor centre. A closure was recorded as of 2026-11-26. Effective from 2026-07-01. No reopening date was published.",
+        "source_ids": [
+          "afcd-tms",
+          "hko-2026",
+          "hk-1823",
+          "afcd-tms-notice"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "notice_closed",
+        "basis": "closure_notice",
+        "area": "centre",
+        "centre": "tai-mo-shan",
+        "local_date": "2026-07-01",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L09",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Tai Mo Shan's published hours for 2026-06-29 are 09:30–16:30. Actual opening on the day is unconfirmed.",
+        "source_ids": [
+          "afcd-tms",
+          "hko-2026",
+          "hk-1823"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "published_hours",
+        "basis": "regular_hours",
+        "area": "centre",
+        "centre": "tai-mo-shan",
+        "local_date": "2026-06-29",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L10",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Renovation of the entire Tai Mo Shan visitor centre. A closure was recorded as of 2026-11-26. Effective from 2026-07-01. No reopening date was published.",
+        "source_ids": [
+          "afcd-tms",
+          "hko-2026",
+          "hk-1823",
+          "afcd-tms-notice"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "notice_closed",
+        "basis": "closure_notice",
+        "area": "centre",
+        "centre": "tai-mo-shan",
+        "local_date": "2026-11-26",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L11",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Renovation of the entire Tai Mo Shan visitor centre. The snapshot recorded this on 2026-11-26 with no end date. The status on 2027-01-02 is unconfirmed. A local staff follow-up draft is awaiting reviewer approval.",
+        "source_ids": [
+          "afcd-tms",
+          "hko-2027",
+          "hk-1823",
+          "afcd-tms-notice"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status",
+          "propose_followup"
+        ],
+        "status": "unknown",
+        "basis": "after_notice_observation",
+        "area": "centre",
+        "centre": "tai-mo-shan",
+        "local_date": "2027-01-02",
+        "proposal": true
+      }
+    },
+    {
+      "id": "L12",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "2028-01-01 is outside the supported calendar of 2026-01-01 through 2027-12-31.",
+        "source_ids": [
+          "afcd-sk",
+          "hk-1823-index"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "unknown",
+        "basis": "outside_calendar",
+        "area": "centre",
+        "centre": "sai-kung",
+        "local_date": "2028-01-01",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L13",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "2025-12-31 is outside the supported calendar of 2026-01-01 through 2027-12-31. A local staff follow-up draft is awaiting reviewer approval.",
+        "source_ids": [
+          "afcd-sm",
+          "hk-1823-index"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status",
+          "propose_followup"
+        ],
+        "status": "unknown",
+        "basis": "outside_calendar",
+        "area": "centre",
+        "centre": "shing-mun",
+        "local_date": "2025-12-31",
+        "proposal": true
+      }
+    },
+    {
+      "id": "L14",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Renovation of the entire Tai Mo Shan visitor centre. A closure was recorded as of 2026-11-26. Effective from 2026-07-01. No reopening date was published. Maintenance suspension of the Hiking Etiquette photo exhibition at Tai Mo Shan.",
+        "source_ids": [
+          "afcd-tms",
+          "hko-2026",
+          "hk-1823",
+          "afcd-photo",
+          "afcd-tms-notice"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "notice_closed",
+        "basis": "closure_notice",
+        "area": "photo-exhibition",
+        "centre": "tai-mo-shan",
+        "local_date": "2026-11-26",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L15",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "Sai Kung's Hiking Etiquette photo exhibition has a published session without stated times. Actual opening on the day is unconfirmed.",
+        "source_ids": [
+          "afcd-sk",
+          "hko-2026",
+          "hk-1823",
+          "afcd-photo"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "published_session",
+        "basis": "exhibition_schedule",
+        "area": "photo-exhibition",
+        "centre": "sai-kung",
+        "local_date": "2026-11-28",
+        "proposal": false
+      }
+    },
+    {
+      "id": "L16",
+      "group": "lookup",
+      "passed": true,
+      "observed": {
+        "decision": "status",
+        "answer": "No Sai Kung's Hiking Etiquette photo exhibition session is listed for this weekday. Actual opening on the day is unconfirmed.",
+        "source_ids": [
+          "afcd-sk",
+          "hko-2026",
+          "hk-1823",
+          "afcd-photo"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "lookup_status"
+        ],
+        "status": "scheduled_closed",
+        "basis": "no_exhibition_session",
+        "area": "photo-exhibition",
+        "centre": "sai-kung",
+        "local_date": "2026-11-26",
+        "proposal": false
+      }
+    },
+    {
+      "id": "B01",
+      "group": "boundaries",
+      "passed": true,
+      "observed": {
+        "decision": "unknown",
+        "answer": "I couldn't find a published answer to that question in the visitor-centre snapshot.",
+        "source_ids": [],
+        "passage_ids": [],
+        "tools": []
+      }
+    },
+    {
+      "id": "B02",
+      "group": "boundaries",
+      "passed": true,
+      "observed": {
+        "decision": "clarify",
+        "answer": "Which centre do you mean (Sai Kung, Shing Mun or Tai Mo Shan)?",
+        "source_ids": [],
+        "passage_ids": [],
+        "tools": []
+      }
+    },
+    {
+      "id": "B03",
+      "group": "boundaries",
+      "passed": true,
+      "observed": {
+        "decision": "clarify",
+        "answer": "Which Hong Kong date should I check? Use YYYY-MM-DD, today or tomorrow.",
+        "source_ids": [],
+        "passage_ids": [],
+        "tools": []
+      }
+    },
+    {
+      "id": "B04",
+      "group": "boundaries",
+      "passed": true,
+      "observed": {
+        "decision": "clarify",
+        "answer": "Which single centre should I check (Sai Kung, Shing Mun or Tai Mo Shan)?",
+        "source_ids": [],
+        "passage_ids": [],
+        "tools": []
+      }
+    },
+    {
+      "id": "B05",
+      "group": "boundaries",
+      "passed": true,
+      "observed": {
+        "decision": "clarify",
+        "answer": "Please give a valid Hong Kong calendar date in YYYY-MM-DD format.",
+        "source_ids": [],
+        "passage_ids": [],
+        "tools": []
+      }
+    },
+    {
+      "id": "B06",
+      "group": "boundaries",
+      "passed": true,
+      "observed": {
+        "decision": "clarify",
+        "answer": "Which single Hong Kong date should I check?",
+        "source_ids": [],
+        "passage_ids": [],
+        "tools": []
+      }
+    },
+    {
+      "id": "R01",
+      "group": "approval",
+      "passed": true,
+      "observed": {
+        "decision": "proposal",
+        "answer": "A local staff follow-up draft is awaiting reviewer approval.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "propose_followup"
+        ],
+        "state": "pending",
+        "responses": [],
+        "review_rows": 0,
+        "followup_rows": 0,
+        "events": [
+          "retrieved",
+          "proposal_staged",
+          "reply"
+        ]
+      }
+    },
+    {
+      "id": "R02",
+      "group": "approval",
+      "passed": true,
+      "observed": {
+        "decision": "proposal",
+        "answer": "A local staff follow-up draft is awaiting reviewer approval.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "propose_followup"
+        ],
+        "state": "pending",
+        "responses": [
+          403,
+          403
+        ],
+        "review_rows": 0,
+        "followup_rows": 0,
+        "events": [
+          "retrieved",
+          "proposal_staged",
+          "reply"
+        ]
+      }
+    },
+    {
+      "id": "R03",
+      "group": "approval",
+      "passed": true,
+      "observed": {
+        "decision": "proposal",
+        "answer": "A local staff follow-up draft is awaiting reviewer approval.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "propose_followup"
+        ],
+        "state": "pending",
+        "responses": [
+          401,
+          401
+        ],
+        "review_rows": 0,
+        "followup_rows": 0,
+        "events": [
+          "retrieved",
+          "proposal_staged",
+          "reply"
+        ]
+      }
+    },
+    {
+      "id": "R04",
+      "group": "approval",
+      "passed": true,
+      "observed": {
+        "decision": "proposal",
+        "answer": "A local staff follow-up draft is awaiting reviewer approval.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "propose_followup"
+        ],
+        "state": "approved",
+        "responses": [
+          200
+        ],
+        "review_rows": 1,
+        "followup_rows": 1,
+        "events": [
+          "retrieved",
+          "proposal_staged",
+          "reply",
+          "review_decided",
+          "followup_created"
+        ]
+      }
+    },
+    {
+      "id": "R05",
+      "group": "approval",
+      "passed": true,
+      "observed": {
+        "decision": "proposal",
+        "answer": "A local staff follow-up draft is awaiting reviewer approval.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "propose_followup"
+        ],
+        "state": "rejected",
+        "responses": [
+          200
+        ],
+        "review_rows": 1,
+        "followup_rows": 0,
+        "events": [
+          "retrieved",
+          "proposal_staged",
+          "reply",
+          "review_decided"
+        ]
+      }
+    },
+    {
+      "id": "R06",
+      "group": "approval",
+      "passed": true,
+      "observed": {
+        "decision": "proposal",
+        "answer": "A local staff follow-up draft is awaiting reviewer approval.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "propose_followup"
+        ],
+        "state": "rejected",
+        "responses": [
+          200,
+          409
+        ],
+        "review_rows": 1,
+        "followup_rows": 0,
+        "events": [
+          "retrieved",
+          "proposal_staged",
+          "reply",
+          "review_decided"
+        ]
+      }
+    },
+    {
+      "id": "R07",
+      "group": "approval",
+      "passed": true,
+      "observed": {
+        "decision": "proposal",
+        "answer": "A local staff follow-up draft is awaiting reviewer approval.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "propose_followup"
+        ],
+        "state": "approved",
+        "responses": [
+          200,
+          200
+        ],
+        "review_rows": 1,
+        "followup_rows": 1,
+        "events": [
+          "retrieved",
+          "proposal_staged",
+          "reply",
+          "review_decided",
+          "followup_created"
+        ]
+      }
+    },
+    {
+      "id": "R08",
+      "group": "approval",
+      "passed": true,
+      "observed": {
+        "decision": "proposal",
+        "answer": "A local staff follow-up draft is awaiting reviewer approval.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "propose_followup"
+        ],
+        "state": "approved",
+        "responses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "review_rows": 1,
+        "followup_rows": 1,
+        "events": [
+          "retrieved",
+          "proposal_staged",
+          "reply",
+          "review_decided",
+          "followup_created"
+        ]
+      }
+    },
+    {
+      "id": "R09",
+      "group": "approval",
+      "passed": true,
+      "observed": {
+        "decision": "proposal",
+        "answer": "A local staff follow-up draft is awaiting reviewer approval.",
+        "source_ids": [
+          "afcd-sm"
+        ],
+        "passage_ids": [],
+        "tools": [
+          "propose_followup"
+        ],
+        "state": "approved",
+        "responses": [
+          200,
+          409
+        ],
+        "review_rows": 1,
+        "followup_rows": 1,
+        "events": [
+          "retrieved",
+          "proposal_staged",
+          "reply",
+          "review_decided",
+          "followup_created"
+        ]
+      }
+    }
+  ]
+}
